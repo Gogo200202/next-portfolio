@@ -25,6 +25,7 @@ export default function RootLayout({
       <main>
         {children}
         </main>
+        <div className=" h-80"></div>
         <Footer/>
         </body>
      
