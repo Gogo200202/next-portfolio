@@ -1,19 +1,34 @@
-import React from "react";
+
+
 import Link from "next/link";
 import Image  from "next/image";
-import jojo from "../img/jojo.jpg"
+import jojo from "../img/test.jpg"
+
+import React, { useRef, useEffect, useState } from "react";
+//import { Animated, Easing, View, StyleSheet, Text } from "react-native";
 export default function MeOnHome () {
 
-  return (<div className=" relative  h-96  w-full">
-    <div className=" absolute  top-14 left-11">
-    <p>Hey there I am</p>
-    <p>Georgi Angelov</p>
-    <p>Looking for the start of me career.</p>
-    </div>
-    <div className=" absolute right-0">
+   
+  return (<div className="mx-auto grid grid-cols-1  md:grid-cols-2">
 
-    <Image className=" m-14"  src={jojo} alt="me" width={300} height={300}></Image>
-    </div>
+<div className="text-2xl">
+
+    <div className="flex whitespace-pre">
+      Hey there
+      <p className="animate-wiggle"> 👋</p>
+      <p> I am</p> 
+       </div>
+
+       <p>Georgi Angelov</p>
+       <p>I am looking to start my career.</p>
+</div>
+  
+    
+   
+
+
+<Image  className="" src={jojo} alt="me" ></Image>
+
     
     
      </div>)
