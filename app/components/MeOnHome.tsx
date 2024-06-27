@@ -8,10 +8,10 @@ import React, { useRef, useEffect, useState } from "react";
 //import { Animated, Easing, View, StyleSheet, Text } from "react-native";
 export default function MeOnHome () {
 
-   
-  return (<div className="mx-auto grid grid-cols-1  md:grid-cols-2">
+  //grid grid-cols-1  md:grid-cols-2
+  return (<div className="  animate-fade w-full  grid  md:flex justify-between p-11   ">
 
-<div className="text-2xl">
+<div className="text-2xl py-4">
 
     <div className="flex whitespace-pre">
       Hey there
@@ -21,13 +21,14 @@ export default function MeOnHome () {
 
        <p>Georgi Angelov</p>
        <p>I am looking to start my career.</p>
+       
 </div>
   
-    
+
    
 
+<div><Image  className="py-4" src={jojo} alt="me" ></Image></div>
 
-<Image  className="" src={jojo} alt="me" ></Image>
 
     
     

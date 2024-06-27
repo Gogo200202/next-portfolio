@@ -5,7 +5,7 @@ import mp3 from "../img/mp3.png"
 //
 export default function Cards () {
 
-  return (    <div className=" container mx-auto  p-6 grid  grid-cols-1  md:grid-cols-3 ">
+  return (    <div className=" animate-fadeBody  container mx-auto  p-6 grid  grid-cols-1  md:grid-cols-3 ">
  
 
     <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

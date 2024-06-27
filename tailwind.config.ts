@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -15,16 +16,34 @@ const config: Config = {
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
+        fade: 'fadeIn  .5s ease-in-out ',
+        fadeBody:'fadeIn  .9s ease-in-out ',
+        textUp:"modeUp  .5s ease-in-out  "
       },
       keyframes: {
+        modeUp:{
+       '0%': {
+            transform: 'translateY(0px)',
+          },
+
+          '50%': {
+            transform: 'translateY(calc(10px - 100%))',
+          },
+
+          '100%': {
+            transform: 'translateY(0px)',
+          },
+        },
+
         wiggle: {
           '0%, 100%': { transform: 'rotate(10deg)' },
           '50%': { transform: 'rotate(-10deg)' },
-        }
+        },
+        fadeIn: {
+					from: { opacity: "0" },
+					to: { opacity: "50" },
+				},
       
-      },
-      blockRuby :{
-        "display": "block ruby"
       }
 
     },

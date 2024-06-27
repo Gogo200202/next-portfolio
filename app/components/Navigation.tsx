@@ -4,17 +4,17 @@ import Link from "next/link";
 import { useState } from 'react';
 
 export default function Navbar () {
-//let buttonCssName="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-const [state, setState] = useState("items-center justify-between hidden w-full md:flex md:w-auto md:order-1");
+
+
+const [state, setState] = useState("hidden");
 
 function ButtonClick(){
-  if(state=="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"){
-    setState("items-center justify-between  w-full md:flex md:w-auto md:order-1");
-  }else if(state=="items-center justify-between  w-full md:flex md:w-auto md:order-1"){
-    setState("items-center justify-between hidden w-full md:flex md:w-auto md:order-1")
+  if(state=="hidden"){
+    setState("");
+  }else if(state==""){
+    setState("hidden")
   }
-
-console.log(state);
+//console.log(state);
 }
 
   return (
@@ -23,7 +23,7 @@ console.log(state);
 
    
 
-<nav className="bg-white border-gray-200 dark:bg-gray-800">
+<nav className="  bg-white border-gray-200 dark:bg-gray-800">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
       <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">My portfolio</span>
@@ -37,21 +37,25 @@ console.log(state);
         </svg>
     </button>
   </div>
-  <div className={state} id="navbar-cta">
+
+
+  
+  <div className={ "items-center justify-between "+state+" w-full md:flex md:w-auto md:order-1"} id="navbar-cta">
     <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-black md:dark:bg-gray-800 dark:border-gray-700">
       <li>
-        <Link href="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</Link>
+        <Link href="/" className=" animate-none md:animate-textUp block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</Link>
       </li>
       <li>
-        <Link href="/About" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
+        <Link href="/About" className=" animate-none md:animate-textUp block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
       </li>
      
       <li>
-        <Link href="ContactMe" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
+        <Link href="ContactMe" className="  animate-none md:animate-textUp block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
       </li>
     </ul>
   </div>
   </div>
+ 
 </nav>
 
     </>
