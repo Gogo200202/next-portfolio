@@ -23,6 +23,9 @@ export default function MeOnHome () {
 
        <p>Georgi Angelov</p>
 
+
+
+
        <p>I am looking to start my career.</p>
        
 </div>
