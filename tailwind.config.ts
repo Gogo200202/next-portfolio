@@ -18,7 +18,8 @@ const config: Config = {
         wiggle: 'wiggle 1s ease-in-out infinite',
         fade: 'fadeIn  .5s ease-in-out ',
         fadeBody:'fadeIn  .9s ease-in-out ',
-        textUp:"modeUp  .5s ease-in-out  "
+        textUp:"modeUp  .5s ease-in-out  ",
+        textLeft:"slideLeft .5s ease-in-out"
       },
       keyframes: {
         modeUp:{
@@ -34,6 +35,19 @@ const config: Config = {
             transform: 'translateY(0px)',
           },
         },
+        slideLeft:{
+          '0%': {
+               transform: 'translateX(0px)',
+             },
+   
+             '50%': {
+               transform: 'translateX(calc(1px + 20%))',
+             },
+   
+             '100%': {
+               transform: 'translateX(0px)',
+             },
+           },
 
         wiggle: {
           '0%, 100%': { transform: 'rotate(10deg)' },
