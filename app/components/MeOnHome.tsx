@@ -22,6 +22,11 @@ export default function MeOnHome () {
        </div>
 
        <p>Georgi Angelov</p>
+
+
+
+
+       
        <p>I am looking to start my career.</p>
        
 </div>
