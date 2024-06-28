@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image  from "next/image";
-import jojo from "../img/jojo.png"
+import jojo from "../img/test.jpg"
 import Laptop from "./laptop";
 import ThreeScene from "./ThreeScene";
 

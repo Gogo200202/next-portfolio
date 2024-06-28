@@ -18,31 +18,53 @@ const ThreeScene: React.FC = () => {
       renderer.setSize(400, 400);
       //0x000000 black
       renderer.setClearColor(0xffffff, 1 );
-     // renderer.setClearColor(0x000000, 1 );
+      //renderer.setClearColor(0x000000, 1 );
       containerRef.current?.appendChild(renderer.domElement);
-      camera.position.z = 400;
-      camera.position.y = 400;
+      camera.position.z = 100;
+      camera.position.y = 50;
+
+      const dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+dirLight.position.set( -1, 0.75, 1 );
+dirLight.position.multiplyScalar( 50);
+dirLight.name = "dirlight";
+// dirLight.shadowCameraVisible = true;
+
+scene.add( dirLight );
       const controls = new OrbitControls(camera, renderer.domElement)
 
         const geometry = new THREE.BoxGeometry();
         const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+      //  scene.add(cube);
       
 
         const objLoader = new OBJLoader()
         
         objLoader.load(
-            'laptop/LaptopModel.obj',
+            'laptop/macLaptop.obj',
             (object) => {
-                (object.children[0] as THREE.Mesh).material = material
-                object.traverse(function (child) {
-                    if ((child as THREE.Mesh).isMesh) {
-                        (child as THREE.Mesh).material = material
-                    }
-                })
+                // (object.children[0] as THREE.Mesh).material = material
+                // object.traverse(function (child) {
+                //     if ((child as THREE.Mesh).isMesh) {
+                //         (child as THREE.Mesh).material = material
+                //     }
+                // })
+
               
                 scene.add(object)
+                      // Render the scene and camera
+        renderer.render(scene, camera);
+        // Add this function inside the useEffect hook
+  const renderScene = () => {
+    
+    //object.rotation.x += 0.01;
+    object.rotation.y += 0.01;
+    renderer.render(scene, camera);
+    requestAnimationFrame(renderScene);
+  };
+  
+  // Call the renderScene function to start the animation loop
+  renderScene();
             },
             (xhr) => {
                 console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -59,19 +81,7 @@ const ThreeScene: React.FC = () => {
 
         
 
-      // Render the scene and camera
-        renderer.render(scene, camera);
-      // Add this function inside the useEffect hook
-const renderScene = () => {
-  
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-  renderer.render(scene, camera);
-  requestAnimationFrame(renderScene);
-};
 
-// Call the renderScene function to start the animation loop
-renderScene();
 
       
     }
