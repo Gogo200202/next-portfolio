@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import Image  from "next/image";
-import jojo from "../img/test.jpg"
+
+import Laptop from "./laptop";
+import ThreeScene from "./ThreeScene";
 
 import React, { useRef, useEffect, useState } from "react";
 //import { Animated, Easing, View, StyleSheet, Text } from "react-native";
@@ -24,10 +26,13 @@ export default function MeOnHome () {
        
 </div>
   
-
+<ThreeScene/>
    
 
-<div><Image  className="py-4" src={jojo} alt="me" ></Image></div>
+<div className="relative">
+  <Image  className="py-4 " src="/img/jojo.png" width={300} height={300} alt="me" ></Image>
+  <div className=" absolute rounded-full  w-52 h-52 -z-10 bg-indigo-950   bottom-0 right-0 "></div>
+  </div>
 
 
     

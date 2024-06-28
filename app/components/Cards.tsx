@@ -1,7 +1,7 @@
 import Image from "next/image";
-import treeDPortfolio from '../img/3dportfolio.png'
-import aspProject from "../img/mvc.png"
-import mp3 from "../img/mp3.png"
+//import treeDPortfolio from '/img/3dportfolio.png'
+// import aspProject from "/img/mvc.png"
+// import mp3 from "img/mp3.png"
 //
 export default function Cards () {
 
@@ -9,7 +9,7 @@ export default function Cards () {
  
 
     <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <Image className="rounded-t-lg" src={ treeDPortfolio}  alt="" />
+    <Image className="rounded-t-lg" src="/img/3dportfolio.png" width={1000} height={1000} alt="" />
     
         <div className="p-5">
           
@@ -26,7 +26,7 @@ export default function Cards () {
     </div>
     
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <Image className="rounded-t-lg" src={ aspProject}   alt="" />
+    <Image className="rounded-t-lg" src="/img/mvc.png"width={1000} height={1000}   alt="" />
         <div className="p-5">
         
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Product sell store</h5>
@@ -41,7 +41,7 @@ export default function Cards () {
         </div>
     </div>
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <Image className="rounded-t-lg" src={ mp3}  alt="" />
+    <Image className="rounded-t-lg" src="/img/mp3.png" width={1000} height={1000}  alt="" />
         <div className="p-5">
             <a href="#">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mp3 player in browser with react</h5>
