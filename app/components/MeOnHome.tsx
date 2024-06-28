@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image  from "next/image";
-
+import jojo from "../img/jojo.png"
 import Laptop from "./laptop";
 import ThreeScene from "./ThreeScene";
 
@@ -30,7 +30,7 @@ export default function MeOnHome () {
    
 
 <div className="relative">
-  <Image  className="py-4 " src="/img/jojo.png" width={300} height={300} alt="me" ></Image>
+  <Image  className="py-4 " src={jojo} width={300} height={300} alt="me" ></Image>
   <div className=" absolute rounded-full  w-52 h-52 -z-10 bg-indigo-950   bottom-0 right-0 "></div>
   </div>
 
