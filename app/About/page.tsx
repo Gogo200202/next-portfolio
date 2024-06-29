@@ -1,7 +1,9 @@
-//import Image from "next/image";
-
+import ThreeScene from "../components/ThreeScene";
 export default function About() {
   return (
-    <div> about</div>
+    <div>
+      about
+      <ThreeScene></ThreeScene>
+    </div>
   );
 }

@@ -16,9 +16,9 @@ const config: Config = {
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        fade: 'fadeIn  .5s ease-in-out ',
+        fade: 'fadeIn  .8s ease-in-out ',
         fadeBody:'fadeIn  .9s ease-in-out ',
-        textUp:"modeUp  .5s ease-in-out  ",
+        textUp:"modeUp  .7s ease-in-out  ",
         textLeft:"slideLeft .5s ease-in-out"
       },
       keyframes: {

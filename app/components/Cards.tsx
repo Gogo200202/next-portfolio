@@ -1,11 +1,35 @@
+"use client";
 import Image from "next/image";
 import treeDPortfolio from "../img/3dportfolio.png";
 import aspProject from "../img/mvc.png";
 import mp3 from "../img/mp3.png";
-//
+import React, { useEffect, useState } from "react";
+let flag: boolean = true;
 export default function Cards() {
+  const [offset, setOffset] = useState(window.scrollY);
+  const [animation, setAnimation] = useState("hidden");
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.scrollY);
+    // clean up code
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  console.log(offset);
+  if (offset > window.screen.height / 4 && flag) {
+    setAnimation("animate-fadeBody");
+    flag = false;
+  }
+
   return (
-    <div className=" animate-fadeBody  container mx-auto  p-6 grid  grid-cols-1 gap-10  md:grid-cols-3 ">
+    <div
+      className={
+        animation +
+        " container mx-auto  p-6 grid  grid-cols-1 gap-10  md:grid-cols-3 "
+      }
+    >
       <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Image className="rounded-t-lg" src={treeDPortfolio} alt="" />
 
