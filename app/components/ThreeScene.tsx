@@ -13,26 +13,20 @@ const ThreeScene: React.FC = () => {
 
         const scene = new THREE.Scene();
 
-        const camera = new THREE.PerspectiveCamera(
-          75,
-          window.innerWidth / window.innerHeight,
-          0.1,
-          1000
-        );
+        const camera = new THREE.PerspectiveCamera();
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(400, 400);
         //0x000000 black
         renderer.setClearColor(0xffffff, 1);
-        // renderer.setClearColor(0x000000, 1 );
+        // renderer.setClearColor(0x000000, 1);
         containerRef.current?.appendChild(renderer.domElement);
-        camera.position.z = 1;
-        camera.position.y = 1;
+        camera.position.z = 0.5;
+        camera.position.y = 0.5;
+        camera.position.x = 0.5;
 
-        const dirLight = new THREE.DirectionalLight(0xffffff, 1);
-        dirLight.position.set(-1, 0.75, 1);
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
+        dirLight.position.set(5, 10, 7.5);
         dirLight.position.multiplyScalar(50);
-        dirLight.name = "dirlight";
-        // dirLight.shadowCameraVisible = true;
 
         scene.add(dirLight);
         const controls = new OrbitControls(camera, renderer.domElement);
@@ -51,7 +45,7 @@ const ThreeScene: React.FC = () => {
               "laptop/BM86_Portable_BaseColorOFF.png"
             );
 
-            const material = new THREE.MeshBasicMaterial({ map: texture });
+            const material = new THREE.MeshStandardMaterial({ map: texture });
 
             object.traverse((child) => {
               if (child instanceof THREE.Mesh) {

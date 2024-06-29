@@ -17,9 +17,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="  bg-white border-gray-200 dark:bg-gray-800">
+      <nav className=" bg-white border-gray-200 dark:bg-gray-800">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <span className=" animate-textLeft   self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className=" ml-0 animate-textLeft    text-2xl font-semibold whitespace-nowrap dark:text-white">
             My portfolio
           </span>
 
