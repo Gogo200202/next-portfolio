@@ -4,8 +4,9 @@ import treeDPortfolio from "../img/3dportfolio.png";
 import aspProject from "../img/mvc.png";
 import mp3 from "../img/mp3.png";
 import React, { useEffect, useState, useRef } from "react";
-let flag: boolean = true;
+
 export default function Cards() {
+  let flag: boolean = true;
   const [isVisible, setIsVisible] = useState(false);
   const targetRef = useRef(null);
 
@@ -35,6 +36,8 @@ export default function Cards() {
       }
     };
   }, []);
+
+  //  console.log(isVisible);
 
   return (
     <div ref={targetRef}>

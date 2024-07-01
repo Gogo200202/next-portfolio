@@ -1,8 +1,8 @@
 import ThreeScene from "../components/ThreeScene";
 export default function About() {
   return (
-    <div className="     grid  md:flex justify-between p-11 ">
-      <div className=" text-2xl animate-fade">
+    <div className="       md:flex justify-between p-11 ">
+      <div className="  text-2xl animate-fade">
         <p className=" font-bold">About me</p>
         <p>I&apos;m studying software and computer engineering</p>
         <p>and i finished all of the C# course from softuni.</p>
@@ -22,15 +22,18 @@ export default function About() {
           </div>
           <div className=" my-3">
             <p>Front end:</p>
-            <p>React,typescript, tailwind, bootstrap, vite, three js</p>
+            <p>
+              React, typescript, tailwind, bootstrap, vite, three js, web
+              assemble
+            </p>
           </div>
           <div className=" my-3">
-            <p>Mobile app dev:</p>
+            <p>Mobile app:</p>
             <p>Framework7</p>
           </div>
           <div className=" my-3">
             <p>Other technologies that i use daily:</p>
-            <p>linux(Ubuntu)</p>
+            <p>Linux (Ubuntu)</p>
           </div>
         </div>
       </div>
