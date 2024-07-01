@@ -6,7 +6,8 @@ import mp3 from "../img/mp3.png";
 import React, { useEffect, useState } from "react";
 let flag: boolean = true;
 export default function Cards() {
-  const [offset, setOffset] = useState(window.scrollY);
+  let windowLenght = window.screenY;
+  const [offset, setOffset] = useState(windowLenght);
   const [animation, setAnimation] = useState("hidden");
 
   useEffect(() => {
