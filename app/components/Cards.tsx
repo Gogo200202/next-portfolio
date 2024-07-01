@@ -12,7 +12,10 @@ export default function Cards() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting && flag) {
+          setIsVisible(entry.isIntersecting);
+          flag = false;
+        }
       },
       {
         root: null, // viewport
