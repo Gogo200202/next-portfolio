@@ -4,7 +4,7 @@ export default function About() {
     <div className="     grid  md:flex justify-between p-11 ">
       <div className=" text-2xl animate-fade">
         <p className=" font-bold">About me</p>
-        <p>I'm studying software and computer engineering</p>
+        <p>I&apos;m studying software and computer engineering</p>
         <p>and i finished all of the C# course from softuni.</p>
         <p>I like exploring new tings and learning from them.</p>
         <div className="">
@@ -22,7 +22,7 @@ export default function About() {
           </div>
           <div className=" my-3">
             <p>Front end:</p>
-            <p>React, tailwind, bootstrap, vite, three js</p>
+            <p>React,typescript, tailwind, bootstrap, vite, three js</p>
           </div>
           <div className=" my-3">
             <p>Mobile app dev:</p>
