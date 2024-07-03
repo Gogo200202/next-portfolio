@@ -7,10 +7,12 @@ export default function ContactMe() {
     <div className="">
       <div className="py-28 grid sm:grid-cols-2 items-start gap-14 p-8   bg-white  rounded-md font-[sans-serif]">
         <div>
-          <h1 className="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
+          <h1 className="text-gray-800 text-3xl font-extrabold">
+            Let&apos;s Talk
+          </h1>
           <p className="text-sm text-gray-500 mt-4">
             Have some big idea or brand to develop and need help? Then reach out
-            we'd love to hear about your project and provide help.
+            we&apos;d love to hear about your project and provide help.
           </p>
 
           <div className="mt-12">
