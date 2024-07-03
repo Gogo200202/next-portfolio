@@ -3,11 +3,12 @@ export default function About() {
   return (
     <div className="       md:flex justify-between p-11 ">
       <div className="  text-2xl animate-fade">
-        <p className=" font-bold">About me</p>
+        <p className="text-gray-800 text-3xl font-extrabold">About me</p>
         <p>I&apos;m studying software and computer engineering</p>
         <p>and i finished all of the C# course from softuni.</p>
         <p>I like exploring new tings and learning from them.</p>
-        <div className="">
+
+        <div>
           <div className=" my-3">
             <p>List of technologies that i used in my projects on github:</p>
             <p>Backends:</p>
@@ -38,7 +39,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className=" my-auto">
+      <div className=" my-auto text-center">
         <ThreeScene />
       </div>
     </div>

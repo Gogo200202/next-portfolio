@@ -29,7 +29,7 @@ const ThreeScene: React.FC = () => {
         camera.position.x = 2;
 
         const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
-        dirLight.position.set(5, 5, 5);
+        dirLight.position.set(0, 3, 5);
         dirLight.position.multiplyScalar(50);
 
         scene.add(dirLight);
@@ -89,6 +89,13 @@ const ThreeScene: React.FC = () => {
     }
   }, []);
 
-  return <div className={animation} ref={containerRef} />;
+  return (
+    <div>
+      <div className={animation}>
+        You can move the camera in this scene and scroll to zoom in.
+      </div>
+      <div className={animation} ref={containerRef} />
+    </div>
+  );
 };
 export default ThreeScene;
