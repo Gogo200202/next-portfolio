@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import jojo from "../img/test.jpg";
+import Me from "../img/Me.png";
 import Laptop from "./laptop";
 import ThreeScene from "./ThreeScene";
 
@@ -19,19 +19,17 @@ export default function MeOnHome() {
 
         <p className="text-5xl font-bold">Georgi Angelov</p>
 
-        <p className="text-5xl">I am looking to start my career.</p>
+        <p className="text-5xl">I am looking to</p>
+        <p className="text-5xl">start my career.</p>
       </div>
 
       <div>
         <div className="relative">
-          <Image
-            className="py-4 "
-            src={jojo}
-            width={500}
-            height={500}
-            alt="me"
-          ></Image>
-          <div className=" absolute rounded-full  w-52 h-52 -z-10 bg-indigo-950   bottom-0 right-0 "></div>
+          <div className=" h-[250px] w-[350px] md:h-[600px] md:w-[900px]">
+            <Image className="py-4 " src={Me} alt="me"></Image>
+          </div>
+
+          <div className=" absolute rounded-full  w-52 h-52 md:w-96 md:h-96 -z-10 bg-indigo-950  bottom-0 right-20 "></div>
         </div>
       </div>
     </div>
